@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f0f2f5;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+      padding: 40px 36px;
+      width: 360px;
+      text-align: center;
+    }
+
+    .avatar-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .avatar {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      background: #b0d2f0;
+      flex-shrink: 0;
+    }
+
+    .avatar-initials {
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 28px;
+      color: #4f6ef7;
+      line-height: 1;
+    }
+
+    .name {
+      font-family: 'Indie Flower', cursive;
+      font-size: 22px;
+      font-weight: 400;
+      color: #1a1a2e;
+      margin-bottom: 4px;
+      text-align: center;
+    }
+
+    .title {
+      font-size: 11px;
+      color: #8892a4;
+      margin-bottom: 28px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid #eef0f4;
+      margin-bottom: 24px;
+    }
+
+    .info-list {
+      list-style: none;
+      text-align: left;
+    }
+
+    .info-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 10px 0;
+      border-bottom: 1px solid #f4f5f7;
+    }
+
+    .info-list li:last-child {
+      border-bottom: none;
+    }
+
+    .icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: #eef2ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .icon span {
+      font-size: 16px;
+      line-height: 1;
+    }
+
+    .info-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .info-label {
+      font-size: 11px;
+      color: #9aa1af;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 2px;
+    }
+
+    .info-value {
+      font-size: 14px;
+      color: #2c2f3a;
+      font-weight: 500;
+    }
+
+    a.info-value {
+      color: #4f6ef7;
+      text-decoration: none;
+    }
+
+    a.info-value:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="avatar-row">
+      <div class="avatar"></div>
+      <span class="avatar-initials">JA</span>
+    </div>
+    <div class="name">Jane Anderson</div>
+    <div class="title">PRODUCT DESIGNER</div>
+    <hr class="divider">
+    <ul class="info-list">
+      <li>
+        <div class="icon"><span>📍</span></div>
+        <div class="info-text">
+          <span class="info-label">ADDRESS</span>
+          <span class="info-value">42 Harbour Lane, Edinburgh EH1 1AA</span>
+        </div>
+      </li>
+      <li>
+        <div class="icon"><span>📞</span></div>
+        <div class="info-text">
+          <span class="info-label">MOBILE</span>
+          <a href="tel:+441312345678" class="info-value">+44 131 234 5678</a>
+        </div>
+      </li>
+      <li>
+        <div class="icon"><span>✉️</span></div>
+        <div class="info-text">
+          <span class="info-label">EMAIL</span>
+          <a href="mailto:jane@anderson.design" class="info-value">jane@anderson.design</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>
