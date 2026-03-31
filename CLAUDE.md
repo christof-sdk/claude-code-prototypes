@@ -6,16 +6,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is a collection of standalone HTML prototypes and demos. Each file is self-contained with embedded CSS and vanilla JavaScript — no build step, no package manager, no framework.
 
-## Development Servers
+## Development Server
 
-**Root directory** (serves all HTML files):
 ```
 npx serve -p 3000 .
-```
-
-**nc500 subdirectory** (Python server):
-```
-python3 -m http.server 3456
 ```
 
 ## Architecture
@@ -24,15 +18,14 @@ All files are single-file HTML apps with inlined CSS and JS. No external build t
 
 ### Files
 
-- **credit-portal.html** — "LoanPilot" enterprise finance portal; petrol/yellow color scheme; vanilla JS for expand/collapse task groups
-- **dashboard.html** — "Nexus" dark-mode analytics dashboard; Canvas 2D API for revenue charts (MRR/ARR); purple/cyan accent colors
-- **eggs.html** — Egg nutrition facts page; integrates the Figma MCP capture script (`mcp.figma.com`) for sending elements to Figma designs
-- **nc500/index.html** — NC500 Scottish cycling route; uses Leaflet.js (CDN) with 150+ hardcoded waypoints; companion GPX file at `nc500/nc.gpx` (komoot export, 1.1 MB)
+- **gps-merge/index.html** — "TrailMerge" GPX track merger; forest/green color scheme; Leaflet.js map with drag-and-drop GPX upload, client-side XML parsing, track merging; test GPX fixtures in `gps-merge/test-track-{a,b,c}.gpx`
+- **contact-test/contact.html** — Contact form UI; Inter + Indie Flower fonts (Google Fonts CDN); light grey background layout
 
 ### External Dependencies (CDN only)
 
-- **Leaflet.js v1.9.4** — used in nc500/index.html for interactive maps
-- **Figma MCP capture script** — used in eggs.html for Figma integration
+- **Leaflet.js v1.9.4** — used in gps-merge/index.html for interactive maps
+- **Figma MCP capture script** (`mcp.figma.com`) — included in both files for sending elements to Figma designs
+- **Google Fonts** — Inter + Indie Flower used in contact-test/contact.html
 
 ## No Tests or CI
 
